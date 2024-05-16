@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+.containerSfondo{
+    background-color: aquamarine;
+    height: 100vh;
+}
+
+
+  /* Stili aggiuntivi per personalizzare l'aspetto */
+  .chat-container {
+    height: 100vh;
+  }
+  .chat-sidebar {
+    background-color: #f0f0f0;
+    border-right: 1px solid #ddd;
+  }
