@@ -174,33 +174,7 @@ createApp({
         }
     },
     methods: {
-        // Click al contatto ricavo il numero array e oggetto
-        clickOnContact(contatto, i, contacts) {
-            this.clickedContact = i
-            // TOLGO LA VISIBILITA AD OGNI CLICK SU TUTTI I CONTATTI
-            for (let i = 0; i < contacts.length; i++) {
-                const element = contacts[i];
-                element.visible = false
-            }
-            contatto.visible = true
-            // SALVO IN UNA VARIABILE I MESSAGGI DEL CONTATTO CLICCATO
-            this.msgClickedContact = contatto.messages
-            this.separationDate();
-        },
-        // Separo la data dai messagi e stati//
-        separationDate() {
-            // PUSHO IN UN ARRAY STATI E DATA
-            for (let i = 0; i < this.msgClickedContact.length; i++) {
-                const element = this.msgClickedContact[i];
-                // console.log(element);
-                if (element.status == 'sent') {
-                    this.lastMessage = element.date
-                }
-                // console.log(this.lastMessage);
-                this.messageSplitted = this.lastMessage.split(' ');
-                // console.log(this.messageSplitted);
-            }
-        },
+       
 
 
     },

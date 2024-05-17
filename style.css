@@ -158,3 +158,42 @@ img {
   border-radius: 50%;
   background-color: white;
 }
+
+/* user image bigger */
+
+.user-image-chat {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-color: white;
+}
+/* Stile messaggi */
+.time-msg {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 12px;
+  font-weight: 750;
+  color: #b0b0b0;
+}
+
+.time-bottom {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 12px;
+  font-weight: 750;
+  color: #b0b0b0;
+}
+
+/* Font size e weight nomi */
+.nome {
+  font-weight: 600;
+}
+
+/* Font size e color last msg */
+.last-msg {
+  font-size: 13px;
+  color: rgb(177, 177, 177);
+  font-weight: 600;
+}

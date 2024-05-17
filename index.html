@@ -53,6 +53,27 @@
                         </div>
                     </div>
                 </div>
+                <!-- SEZIONE CARD UTENTI -->
+                <div class="left-user flex-columns">
+                    <!-- CARD UTENTE -->
+                    <div class="card-utente position-relative p-2 d-flex" v-for="contatto , i in contacts">
+                        <!-- IMMAGINE UTENTE -->
+                        <div class="user-image-chat">
+                            <img :src="contatto.avatar" alt="">
+                        </div>
+                        <div class="flex-columns ps-2">
+                            <!-- Nome utente -->
+                            <div class="nome">{{contatto.name}}</div>
+                            <div class="last-msg">ultimo messaggio inviato</div>
+                        </div>
+                        <!-- POSITION ABSOLUTE PER ORARIO -->
+                        <div class="time-msg">
+                            12:10
+                        </div>
+                    </div>
+                </div>
+            </div>
+
     </main>
 
 
