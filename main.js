@@ -1,16 +1,16 @@
 
-//Importo la funzione "createApp" dalla classe/oggettone "Vue"
-const { createApp } = Vue;
+//Vue app
 
-//Creo un oggetto con la configurazione (i dati) della mia app
-const configurazione = {
+const { createApp } = Vue
+
+createApp({
     data() {
-        //La funzione restituisce un oggetto con tutti i dati
         return {
-            contatti: [
+            // TUTTI I CONTATTI E LE LORO INFO
+            contacts: [
                 {
                     name: 'Michele',
-                    avatar: './img/avatar_1.png',
+                    avatar: './img/avatar_8.jpg',
                     visible: true,
                     messages: [
                         {
@@ -32,8 +32,8 @@ const configurazione = {
                 },
                 {
                     name: 'Fabio',
-                    avatar: './img/avatar_2.png',
-                    visible: true,
+                    avatar: './img/avatar_1.jpg',
+                    visible: false,
                     messages: [
                         {
                             date: '20/03/2020 16:30:00',
@@ -54,8 +54,8 @@ const configurazione = {
                 },
                 {
                     name: 'Samuele',
-                    avatar: './img/avatar_3.png',
-                    visible: true,
+                    avatar: './img/avatar_2.jpg',
+                    visible: false,
                     messages: [
                         {
                             date: '28/03/2020 10:10:40',
@@ -76,8 +76,8 @@ const configurazione = {
                 },
                 {
                     name: 'Alessandro B.',
-                    avatar: './img/avatar_4.png',
-                    visible: true,
+                    avatar: './img/avatar_3.jpg',
+                    visible: false,
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -93,8 +93,8 @@ const configurazione = {
                 },
                 {
                     name: 'Alessandro L.',
-                    avatar: './img/avatar_5.png',
-                    visible: true,
+                    avatar: './img/avatar_4.jpg',
+                    visible: false,
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -110,8 +110,8 @@ const configurazione = {
                 },
                 {
                     name: 'Claudia',
-                    avatar: './img/avatar_6.png',
-                    visible: true,
+                    avatar: './img/avatar_5.jpg',
+                    visible: false,
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -132,8 +132,8 @@ const configurazione = {
                 },
                 {
                     name: 'Federico',
-                    avatar: './img/avatar_7.png',
-                    visible: true,
+                    avatar: './img/avatar_6.jpg',
+                    visible: false,
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -149,8 +149,8 @@ const configurazione = {
                 },
                 {
                     name: 'Davide',
-                    avatar: './img/avatar_8.png',
-                    visible: true,
+                    avatar: './img/avatar_7.jpg',
+                    visible: false,
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -169,20 +169,46 @@ const configurazione = {
                         }
                     ],
                 }
-            ]
-            
+            ],
             
         }
     },
-};
+    methods: {
+        // Click al contatto ricavo il numero array e oggetto
+        clickOnContact(contatto, i, contacts) {
+            this.clickedContact = i
+            // TOLGO LA VISIBILITA AD OGNI CLICK SU TUTTI I CONTATTI
+            for (let i = 0; i < contacts.length; i++) {
+                const element = contacts[i];
+                element.visible = false
+            }
+            contatto.visible = true
+            // SALVO IN UNA VARIABILE I MESSAGGI DEL CONTATTO CLICCATO
+            this.msgClickedContact = contatto.messages
+            this.separationDate();
+        },
+        // Separo la data dai messagi e stati//
+        separationDate() {
+            // PUSHO IN UN ARRAY STATI E DATA
+            for (let i = 0; i < this.msgClickedContact.length; i++) {
+                const element = this.msgClickedContact[i];
+                // console.log(element);
+                if (element.status == 'sent') {
+                    this.lastMessage = element.date
+                }
+                // console.log(this.lastMessage);
+                this.messageSplitted = this.lastMessage.split(' ');
+                // console.log(this.messageSplitted);
+            }
+        },
 
 
-app.mount('#app'); 
+    },
+    mounted() {
+    }
+},
 
-
-
-
-
+).mount('#app')
 
 
 

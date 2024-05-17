@@ -20,41 +20,44 @@
 
 <body>
 
+    <main class="background">
+        <div id="app">
+            <!-- COLONNA DI SINISTRA -->
+            <div class="left-column">
+                <div class="top-row content-padding">
+                    <!-- img user -->
+                    <div class="d-flex flex-center">
+                        <div class="user-image">
+                            <img src="./img/avatar_io.jpg" alt="">
+                        </div>
+                        <!-- nome user -->
+                        <div class="ps-2 nome">
+                            Paola
+                        </div>
+                    </div>
+                    <!-- Icone a sinistra -->
+                    <div>
+                        <i class="fa-solid fa-circle-notch pe-3"></i>
+                        <i class="fa-solid fa-message pe-3"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+                <!-- SEARCH BAR UTENTI -->
+                <div class="left-searchbar gold">
+                    <div class="container-fluid pt-1">
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic-addon1"><i
+                                    class="fa-solid fa-magnifying-glass"></i></span>
+                            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat"
+                                aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                </div>
+    </main>
 
-    <!-- contenitore pagina -->
-    <div class="containerSfondo">
-        <div class="container py-3 ">
-            <div class="row chat-container">
-              <!-- Lato sinistro (Sidebar) -->
-              <div class="col-md-4 chat-sidebar">
-                <!-- Contenuto del lato sinistro -->
-                <!-- utente -->
-                <div class="row">
-                    <div class="col">utente</div>
-                </div>
-                <!-- notifiche -->
-                <div class="row">
-                    <div class="col">notifiche</div>
-                </div>
-                <!-- navbar -->
-                <div class="row">
-                    <div class="col">utente</div>
-                </div>
-                <!--  contenuto del lato sinistro, lista delle chat -->
-                <div class="row">
-                    <div class="col">Lista</div>
-                </div>
-              </div>
-              <!-- Lato destro (Main content) -->
-              <div class="col-md-8">
-                <!-- Contenuto del lato destro -->
-                <h2>Main Content</h2>
-                <!--  contenuto del lato destro, come la conversazione -->
-              </div>
-            </div>
-          </div>
 
-    </div>
+
+
     <!-- js -->
     <script src="main.js"></script>
 </body>
