@@ -10,11 +10,23 @@
 
 /* Reset Button */
 
+button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 1rem;
+  border-radius: 15px;
+}
 
 /* Common */
 
-.flex {
-  display: flex;
+
+
+img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
 }
 
 
@@ -33,79 +45,6 @@
   width: 1320px;
   height: calc(100% - 6rem);
   margin: 0 auto;
-  background-color: rgb(187, 0, 255);
-  display: flex;
-}
-
-.flex {
-  display: flex;
-}
-
-.flex-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.flex-center-left {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.flex-no-center {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-
-.flex-columns {
-  display: flex;
-  flex-direction: column;
-}
-
-
-.text-center {
-  text-align: center;
-}
-
-.content-padding {
-  padding: 1rem;
-}
-
-.margin {
-  margin: 3vh 0;
-}
-
-.container {
-  width: 1150px;
-  margin: 0 auto;
-}
-
-.gold {
-  background-color: rgb(235, 235, 235);
-}
-
-img {
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 50%;
-}
-
-
-#app {
-  width: 1320px;
-  height: calc(100% - 6rem);
-  margin: 0 auto;
   background-color: blue;
   display: flex;
 }
@@ -118,37 +57,27 @@ img {
   flex-direction: column;
 }
 
+.container-name{
+  width: 45%;
+}
+.container-icon-sx{
+  width: 45%;
+}
+
+
+.container-top-row{
+  display: flex;
+  flex-direction: row;
+  
+  background-color: lightgray;
+}
+
 .right-column {
   width: 70%;
   height: 100%;
   background-color: #eaeaea;
   display: flex;
   flex-direction: column;
-}
-
-.top-row {
-  height: 4rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.left-notify {
-  height: 5rem;
-  width: 100%;
-  background-color: #8edafc;
-}
-
-.left-searchbar {
-  height: 3rem;
-  width: 100%;
-}
-
-.left-user {
-  height: calc(100% - 12rem);
-  width: 100%;
-  overflow: auto;
 }
 
 /* Immagine utente */
@@ -161,39 +90,35 @@ img {
 
 /* user image bigger */
 
-.user-image-chat {
+.user-image-big {
   height: 4rem;
   width: 4rem;
   border-radius: 50%;
   background-color: white;
 }
-/* Stile messaggi */
-.time-msg {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  font-size: 12px;
-  font-weight: 750;
+
+/* Icone top-bar */
+
+.top-row i {
+  font-size: 1.4rem;
+  padding: 0.2rem;
   color: #b0b0b0;
 }
 
-.time-bottom {
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-  font-size: 12px;
-  font-weight: 750;
+/* icona search bar sinistra */
+
+.input-group i {
   color: #b0b0b0;
 }
 
-/* Font size e weight nomi */
-.nome {
-  font-weight: 600;
+/* Icona campanella bianca */
+
+.left-notify i {
+  color: white;
 }
 
-/* Font size e color last msg */
-.last-msg {
-  font-size: 13px;
-  color: rgb(177, 177, 177);
-  font-weight: 600;
+/* Icona bar scrittura */
+
+.right-writebar i {
+  color: #868686;
 }
