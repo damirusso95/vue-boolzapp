@@ -64,7 +64,8 @@
                 <div class="chat-container overflow-auto h-100vh">
                     <!-- V-FOR PER ITERARE SULL'ARRAY E STAMPARE I DATA -->
                     <div class="left-notify content-padding d-flex m-3" v-for="(utente, index) in contacts"
-                        :key="index">
+                        :key="index" @click="selectChat(index)" :class="{ selected: index === activeChatIndex }"
+                        >
                         <div class="user-image">
                             <img :src="utente.avatar" alt="">
                         </div>

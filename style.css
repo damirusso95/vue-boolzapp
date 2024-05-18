@@ -120,14 +120,16 @@ img {
 /* Icona bar scrittura */
 
 .right-writebar i {
-  color: #868686;
+  color: #665f5f;
 }
 
 
 
 
 
-
+.selected {
+  background-color: #e0e0e0; /* Colore di sfondo grigio */
+}
 
 
 
@@ -138,7 +140,7 @@ img {
 .chat-content {
   overflow-y: auto;
   height: 100%;
-  background-color: aqua;
+  background-image: url(./img/mine.jpg)
   
 }
 .message {
