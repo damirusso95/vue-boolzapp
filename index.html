@@ -25,11 +25,11 @@
             <!-- COLONNA DI SINISTRA -->
             <div class="left-column">
                 <!-- IO UTENTE -->
-                <div class="container-top-row">
+                <div class="container-top-row p-2">
                     <div class="user-image">
                         <img src="./img/avatar_io.jpg" alt="">
                     </div>
-                    <div class="container-name">
+                    <div class="container-name p-2 ">
                         <!-- NOME UTENTE -->
                         <p>Sofia</p>
                     </div>
@@ -37,7 +37,7 @@
                     <div class="container-icon-sx text-end">icone</div>
                 </div>
                 <!-- notifiche -->
-                <div class="left-notify content-padding d-flex">
+                <div class="left-notify content-padding d-flex p-2">
                     <div>
                         <i class="fa-solid fa-bell-slash fa-3x"></i>
                     </div>
@@ -63,13 +63,14 @@
                 </div>
                 <div class="chat-container overflow-auto h-100vh">
                     <!-- V-FOR PER ITERARE SULL'ARRAY E STAMPARE I DATA -->
-                    <div class="left-notify content-padding d-flex m-3" v-for="(utente, index) in contacts" :key="index">
+                    <div class="left-notify content-padding d-flex m-3" v-for="(utente, index) in contacts"
+                        :key="index">
                         <div class="user-image">
                             <img :src="utente.avatar" alt="">
                         </div>
                         <div class="flex-columns ps-2">
                             <div>
-                               {{utente.name}} 
+                                {{utente.name}}
                             </div>
                             <div>
                                 Ultimo messaggio inviato
@@ -79,9 +80,45 @@
                 </div>
 
 
+            </div>
+
+            <!-- COLONNA DI DESTRA -->
+            <div class="right-column">
+                <div class="container-top-row p-2">
+                    <div class="user-image">
+                        <img src="./img/avatar_io.jpg" alt="">
+                    </div>
+                    <div class="container-name p-2 ">
+                        <!-- NOME UTENTE -->
+                        <p>utente attivo</p>
+                    </div>
+                    <!-- ICONE UTENTE -->
+                    <div class="container-icon-sx text-end">icone</div>
+                </div>
+                <div class="chat-content">
+                    prova
+                </div>
+                <!-- BOTTOM MSG BAR -->
+                <div class="right-writebar d-flex p-2 container-fluid align-items-center">
+                    <i class="fa-regular fa-face-smile fa-2x pe-2"></i>
+                    <div class="input-group d-flex ">
+                        <input type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="msg"
+                            aria-describedby="basic-addon1">
+                    </div>
+                    <i class="fa-solid fa-microphone fa-2x ps-2"></i>
+                </div>
+
+
 
 
             </div>
+
+
+
+
+
+
+
         </div>
 
 
