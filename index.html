@@ -63,9 +63,8 @@
                 </div>
                 <div class="chat-container overflow-auto h-100vh">
                     <!-- V-FOR PER ITERARE SULL'ARRAY E STAMPARE I DATA -->
-                    <div class="left-notify content-padding d-flex m-3" v-for="(utente, index) in contacts"
-                        :key="index" @click="selectChat(index)" :class="{ selected: index === activeChatIndex }"
-                        >
+                    <div class="left-notify content-padding d-flex m-3" v-for="(utente, index) in contacts" :key="index"
+                        @click="selectChat(index)" :class="{ selected: index === activeChatIndex }">
                         <div class="user-image">
                             <img :src="utente.avatar" alt="">
                         </div>
@@ -97,30 +96,33 @@
                     <div class="container-icon-sx text-end">icone</div>
                 </div>
                 <div class="chat-content">
-                    prova
-                </div>
-                <!-- BOTTOM MSG BAR -->
-                <div class="right-writebar d-flex p-2 container-fluid align-items-center">
-                    <i class="fa-regular fa-face-smile fa-2x pe-2"></i>
-                    <div class="input-group d-flex ">
-                        <input type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="msg"
-                            aria-describedby="basic-addon1">
+                    <!-- Visualizzazione dei messaggi della chat attiva -->
+                    <div v-for="(message, index) in activeChatMessages" :key="index" :class="['message', message.status]">
+                      {{ message.message }}
                     </div>
-                    <i class="fa-solid fa-microphone fa-2x ps-2"></i>
+                  </div>
+                    <!-- BOTTOM MSG BAR -->
+                    <div class="right-writebar d-flex p-2 container-fluid align-items-center">
+                        <i class="fa-regular fa-face-smile fa-2x pe-2"></i>
+                        <div class="input-group d-flex ">
+                            <input type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="msg"
+                                aria-describedby="basic-addon1">
+                        </div>
+                        <i class="fa-solid fa-microphone fa-2x ps-2"></i>
+                    </div>
+
+
+
+
                 </div>
+
+
+
 
 
 
 
             </div>
-
-
-
-
-
-
-
-        </div>
 
 
     </main>

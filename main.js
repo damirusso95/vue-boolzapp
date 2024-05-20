@@ -170,11 +170,13 @@ createApp({
                     ],
                 }
             ],
-
-            activeChatIndex: 0,
+            activeChatIndex: null,
+            
             
             
         }
+
+        
     },
     methods: {
         selectChat(index) {
@@ -182,11 +184,17 @@ createApp({
            
           }
        
-        
-
+    },
+    computed:{
+    activeChatMessages() {
+        if (this.activeChatIndex !== null) {
+          return this.contacts[this.activeChatIndex].messages;
+        }
+        return [];
+      }
+    }
     },
     
-},
 
 
 ).mount('#app')

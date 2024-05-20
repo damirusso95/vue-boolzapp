@@ -124,9 +124,6 @@ img {
 }
 
 
-
-
-
 .selected {
   background-color: #e0e0e0; /* Colore di sfondo grigio */
 }
@@ -147,6 +144,7 @@ img {
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
+  width: 15rem;
 }
 .message.sent {
   background-color: #d1f8ff;
