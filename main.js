@@ -9,23 +9,23 @@ createApp({
             // TUTTI I CONTATTI E LE LORO INFO
             contacts: [
                 {
-                    name: 'Michele',
+                    name: 'Peppe Commenda',
                     avatar: './img/avatar_1.jpg',
                     visible: true,
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
-                            message: 'Hai portato a spasso il cane?',
+                            message: 'Mbare peppeeee',
                             status: 'sent'
                         },
                         {
                             date: '10/01/2020 15:50:00',
-                            message: 'Ricordati di stendere i panni',
+                            message: ' stasera giochi con anthony?',
                             status: 'sent'
                         },
                         {
                             date: '10/01/2020 16:15:22',
-                            message: 'Tutto fatto!',
+                            message: 'non ci sono',
                             status: 'received'
                         }
                     ],
@@ -37,17 +37,17 @@ createApp({
                     messages: [
                         {
                             date: '20/03/2020 16:30:00',
-                            message: 'Ciao come stai?',
+                            message: 'Ciao come stai? Stasera ci vediamo?',
                             status: 'sent'
                         },
                         {
                             date: '20/03/2020 16:30:55',
-                            message: 'Bene grazie! Stasera ci vediamo?',
+                            message: 'che sclero, sto valutando',
                             status: 'received'
                         },
                         {
                             date: '20/03/2020 16:35:00',
-                            message: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                            message: 'ava mbare',
                             status: 'sent'
                         }
                     ],
@@ -171,30 +171,69 @@ createApp({
                 }
             ],
             activeChatIndex: null,
-            
-            
-            
+            newMessage: '',
+
+
+
         }
 
-        
+
     },
     methods: {
         selectChat(index) {
             this.activeChatIndex = index;
-           
+
+        },
+
+        sendMessage() {
+            if (this.newMessage.trim() !== '') {
+              const newMessageObj = {
+                date: new Date().toLocaleString(),
+                message: this.newMessage,
+                status: 'sent'
+              };
+              this.contacts[this.activeChatIndex].messages.push(newMessageObj);
+              this.newMessage = '';
+            }
           }
-       
+
     },
-    computed:{
-    activeChatMessages() {
-        if (this.activeChatIndex !== null) {
-          return this.contacts[this.activeChatIndex].messages;
-        }
-        return [];
-      }
+
+    sendMessage() {
+        let nuovoMessaggio = {
+            date: '20/05/2024 14:32:51',
+            message: 'Queste sono parole a caso?',
+            status: 'sent'
+        };
+        // contacts, all'indice della chat attiva, nella proprietà con l'array dei messaggi, pusho nuovo messaggio
+        this.contacts[this.chatAttiva].messages.push(nuovoMessaggio);
+    },
+
+
+    computed: {
+        activeChatMessages() {
+            if (this.activeChatIndex !== null) {
+                return this.contacts[this.activeChatIndex].messages;
+            }
+            return [];
+        },
+        activeChatName() {
+            if (this.activeChatIndex !== null) {
+                return this.contacts[this.activeChatIndex].name;
+            }
+            return '';
+        },
+        activeChatAvatar() {
+            if (this.activeChatIndex !== null) {
+              return this.contacts[this.activeChatIndex].avatar;
+            }
+            return '';
+          }
     }
-    },
+
     
+},
+
 
 
 ).mount('#app')

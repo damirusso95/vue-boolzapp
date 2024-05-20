@@ -57,18 +57,19 @@ img {
   flex-direction: column;
 }
 
-.container-name{
+.container-name {
   width: 45%;
 }
-.container-icon-sx{
+
+.container-icon-sx {
   width: 45%;
 }
 
 
-.container-top-row{
+.container-top-row {
   display: flex;
   flex-direction: row;
-  
+
   background-color: lightgray;
 }
 
@@ -125,31 +126,34 @@ img {
 
 
 .selected {
-  background-color: #e0e0e0; /* Colore di sfondo grigio */
+  background-color: #e0e0e0;
+  /* Colore di sfondo grigio */
 }
 
-
-
-
-
-
-/* prova */
 .chat-content {
+
+  display: flex;
+  flex-direction: column;
   overflow-y: auto;
   height: 100%;
-  background-image: url(./img/mine.jpg)
-  
+  background-image: url(./img/mine.jpg);
+  padding-top: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
+
 .message {
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
   width: 15rem;
 }
+
 .message.sent {
   background-color: #d1f8ff;
   align-self: flex-end;
 }
+
 .message.received {
   background-color: #f1f0f0;
   align-self: flex-start;
